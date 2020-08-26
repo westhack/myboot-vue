@@ -1,0 +1,9 @@
+{
+  "name": "myboot-module-banner",
+  "title": "广告模块",
+  "version": "0.0.1",
+  "description": "广告模块",
+  "author": "westhack",
+  "dependencies": {},
+  "devDependencies": {}
+}

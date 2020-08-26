@@ -1,0 +1,9 @@
+{
+  "name": "myboot-module-core",
+  "title": "基础模块",
+  "version": "0.0.1",
+  "description": "基础模块",
+  "author": "westhack",
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -1,0 +1,9 @@
+{
+  "name": "myboot-module-article",
+  "title": "资讯模块",
+  "version": "0.0.1",
+  "description": "资讯模块",
+  "author": "westhack",
+  "dependencies": {},
+  "devDependencies": {}
+}
