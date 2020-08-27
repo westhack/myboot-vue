@@ -69,7 +69,7 @@
                               修改
                             </a-menu-item>
 
-                            <a-menu-item key="del" coreConfigListdelete>
+                            <a-menu-item key="del" v-permission:coreConfigListdelete>
                               <a-popconfirm title="确定要删除?" @confirm="handleBar('del', field)" okText="是" cancelText="否">
                                 <div>删除</div>
                               </a-popconfirm>
@@ -261,7 +261,7 @@ export default {
 
         _.each(item, (value, name) => {
           if (this.formData[name] !== undefined) {
-            if (name === 'data' || name === 'rules' || name === 'value') {
+            if (name === 'value') {
               this.formData[name]['value'] = JSON.stringify(value, null, 2)
             } else {
               this.formData[name]['value'] = value
@@ -277,8 +277,14 @@ export default {
         }
 
         this.formData = _.cloneDeep(defaultFormData)
-        this.formData.module.value = item.module
-        this.formData.parent_name.value = item.name
+        if (!item.hasOwnProperty('module')) {
+          this.formData.module.value = item.name
+          this.formData.parent_name.value = ''
+        } else {
+          this.formData.module.value = item.module
+          this.formData.parent_name.value = item.name
+        }
+
         this.visible = true
       } else if (key === 'del') {
         this.handelDel(item)

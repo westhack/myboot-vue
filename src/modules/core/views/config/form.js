@@ -21,7 +21,7 @@ export const defaultFormData = {
     label: '分组',
     type: 'select',
     value: '',
-    rules: [{ required: true, message: '不能为空' }]
+    rules: []
   },
   'label': {
     name: 'label',
@@ -54,30 +54,15 @@ export const defaultFormData = {
     showSearch: true,
     rules: [{ required: true, message: '不能为空' }]
   },
-  'description': {
-    name: 'description',
-    label: '描述',
-    type: 'textarea',
-    value: '',
-    rules: []
-  },
-  'sort_order': {
-    name: 'sort_order',
-    label: '排序',
-    type: 'input-number',
-    value: '99999',
-    placeholder: '越小越靠前',
-    rules: [{ required: true, message: '不能为空' }]
-  },
-  'data': {
-    name: 'data',
+  'data_source': {
+    name: 'data_source',
     label: '数据',
     type: 'textarea',
     value: '',
     rules: []
   },
-  'rules': {
-    name: 'rules',
+  'rules_source': {
+    name: 'rules_source',
     label: '规则',
     type: 'textarea',
     value: '',
@@ -89,5 +74,20 @@ export const defaultFormData = {
     type: 'switch',
     value: false,
     rules: []
+  },
+  'description': {
+    name: 'description',
+    label: '描述',
+    type: 'input',
+    value: '',
+    rules: []
+  },
+  'sort_order': {
+    name: 'sort_order',
+    label: '排序',
+    type: 'input-number',
+    value: '99999',
+    placeholder: '越小越靠前',
+    rules: [{ required: true, message: '不能为空' }]
   }
 }
